@@ -17,10 +17,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors())
 
-
 app.use("/api/formulario",require("./routes/tasks"))
-
-app.use(express.static(__dirname + "/public"));
 
 app.listen(port,()=>{
     console.log(`Servidor activo en el port ${port}`);
