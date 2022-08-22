@@ -4,7 +4,9 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors")
 
-mongoose.connect('mongodb://localhost/hotel-database')
+require('dotenv').config();
+
+mongoose.connect(process.env.URI)
 .then(db => console.log("BD CONNECT"))
 .catch(err => console.log("error"))
 
